@@ -23,7 +23,7 @@ else if(0<=ticketSale){
     // You have to write your code here
     }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 /*function signature/sample */
 function checkName(name) {
@@ -40,7 +40,7 @@ if(Name.endsWith('a')||Name.endsWith('y')||Name.endsWith('i')||Name.endsWith('e'
     //write your code here
     }
     
-////////////////////////
+
 
     /*function signature/sample */
 function deleteInvalids(array) {
@@ -64,4 +64,45 @@ if(!Array.isArray(array))
     }
 
 
+    /*function signature/sample */
+function password(obj) {
+
+    const siteName=obj.siteName;
+    const birthYear=obj.birthYear;
+    const name=obj.name;
     
+    //write your code here
+if( !obj.name || !obj.birthYear || !obj.siteName ){
+return `invalid`
+}
+else if(birthYear.toString().length!==4){
+    return`invalid`
+}
+ else{
+
+
+    
+      const charat=siteName.split('');
+    const firstCharatRemove=charat.shift();
+    const firstCharatCapital=firstCharatRemove.toUpperCase();
+    charat.unshift(firstCharatCapital);
+    const chartJoin=charat.join('');
+    
+    const answer=chartJoin.concat("#").concat(name).concat('@').concat(birthYear);
+    return answer;   }
+
+}
+
+////////
+
+/*function signature/sample */
+function monthlySavings(arr , livingCost) {
+    // You have to write your code here
+
+ for(const array of arr){
+
+  
+}
+}
+    const output=monthlySavings([1000,2000,2500],5000)
+    console.log(output);
