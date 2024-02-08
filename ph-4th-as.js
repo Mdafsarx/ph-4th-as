@@ -14,16 +14,13 @@ else if(0<=ticketSale){
     const eightStaffLunch=50 * 8;
 
     const answer=(perTicket * ticketSale) -(guardSalary + eightStaffLunch);
-    console.log(answer)
-
+return answer;
     }
     
 
 
     // You have to write your code here
     }
-
-
 
 /*function signature/sample */
 function checkName(name) {
@@ -40,8 +37,6 @@ if(Name.endsWith('a')||Name.endsWith('y')||Name.endsWith('i')||Name.endsWith('e'
     //write your code here
     }
     
-
-
     /*function signature/sample */
 function deleteInvalids(array) {
 
@@ -62,7 +57,6 @@ if(!Array.isArray(array))
     }
     // You have to write your code here
     }
-
 
     /*function signature/sample */
 function password(obj) {
@@ -93,16 +87,30 @@ else if(birthYear.toString().length!==4){
 
 }
 
-////////
-
 /*function signature/sample */
-function monthlySavings(arr , livingCost) {
+function monthlySavings(array , livingCost) {
     // You have to write your code here
-
- for(const array of arr){
-
-  
+if(!Array.isArray(array) || typeof livingCost !=='number'){
+    return `invalid input`
 }
+
+else{
+
+    let sum=0;
+    let totalTax=0;
+        for(const arr of array ){
+    sum=sum+arr;
+    // tax part//
+    if(arr>=3000){ 
+    let tax=arr * 20 /100
+    totalTax=totalTax + tax; } }
+
+        const totalTaka=sum - totalTax - livingCost;
+    
+        if( totalTaka>=0){
+            return totalTaka;}
+        else if(totalTaka<0){
+            return `earn more` }}
+
 }
-    const output=monthlySavings([1000,2000,2500],5000)
-    console.log(output);
+
